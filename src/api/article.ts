@@ -77,7 +77,7 @@ export function articleListApi(
 }
 
 export const articleCategoryListApi: () => Promise<baseResponse<optionType[]>> =
-  cacheRequest(() => useAxios.get("/api/categorys"));
+  cacheRequest(() => useAxios.get("/api/categories"));
 
 export interface articleUpdateType {
   abstract?: string;
@@ -112,7 +112,7 @@ export function articleContentApi(id: string): Promise<baseResponse<string>> {
 export function articleCollectsApi(
   params: paramsType
 ): Promise<baseResponse<listDataType<articleType>>> {
-  return useAxios.get("/api/articles/collects", { params: params });
+  return useAxios.get("/api/articles/collections", { params: params });
 }
 
 export interface articleCalendarType {
