@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from "node:url";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig, loadEnv } from "vite";
 import type { ImportMetaEnv } from "./env";
+import { pxtoViewport } from "./plugins/pxto-viewport";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -11,6 +12,12 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue()],
+    css: {
+      postcss: {
+        plugins: [pxtoViewport()],
+      },
+    },
+    envDir: "./",
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
