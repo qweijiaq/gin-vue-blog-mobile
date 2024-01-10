@@ -135,7 +135,7 @@ export function articleDetailApi(
 export function articleCollectsPostApi(
   id: string
 ): Promise<baseResponse<string>> {
-  return useAxios.post("/api/articles/collects", { id });
+  return useAxios.post("/api/articles/collections", { id });
 }
 
 export function articleDiggApi(id: string): Promise<baseResponse<string>> {
