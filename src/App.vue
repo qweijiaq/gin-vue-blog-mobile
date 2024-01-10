@@ -2,6 +2,9 @@
   <router-view />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useStore } from "@/stores";
 
-<style scoped></style>
+const store = useStore();
+store.loadToken();
+</script>

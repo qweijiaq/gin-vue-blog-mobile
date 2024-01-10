@@ -20,7 +20,7 @@ const router = createRouter({
     },
     {
       path: "/mine_collections",
-      name: "mine_collections",
+      name: "mineCollections",
       component: () => import("../views/mine_collections.vue"),
     },
   ],
