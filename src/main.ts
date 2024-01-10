@@ -1,4 +1,6 @@
+import "@/assets/base.css";
 import "vant/lib/index.css";
+import "font-awesome/css/font-awesome.min.css";
 
 import { createApp } from "vue";
 import { createPinia } from "pinia";
