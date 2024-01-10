@@ -1,9 +1,7 @@
 <template>
-  <Button type="primary">主要按钮</Button>
+  <router-view />
 </template>
 
-<script setup lang="ts">
-import { Button } from "vant";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
